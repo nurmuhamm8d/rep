@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
   }
@@ -79,4 +80,60 @@ body {
       .section {
           flex: 0 0 calc(100% - 20px);
       }
+=======
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  
+  }
+  
+  .section {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      margin: 10px;
+      padding: 20px;
+  }
+  
+  @media only screen and (min-width: 1200px) {
+      body {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .section {
+          flex: 0 0 calc(33.33% - 20px);
+      }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199px) {
+      body {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .section {
+          flex: 0 0 calc(33.33% - 20px);
+      }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+      body {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .section {
+          flex: 0 0 calc(50% - 20px);
+      }
+  }
+  @media (max-width: 991px) {
+      body {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .section {
+          flex: 0 0 calc(100% - 20px);
+      }
+>>>>>>> ae649c8671315365caafacb13b3c7b4f56d17c39
   }
