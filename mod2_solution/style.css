@@ -1,82 +1,92 @@
 * {
     box-sizing: border-box;
-  }
-
+    font-family: "Comic Sans MS", "Gill Sans", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 175%;
+}
 
 p {
-  border: 1px solid black;
-  background-color: #A52A2A;
-  width: 90%;
-  height: 150px;
-  margin-right: auto;
-  margin-left: auto;
-  font-family: Helvetica;
-  color: white;
+    width: 100%;
+    padding: 5px 20px;
 }
-body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-}
-  
 
-.section {
-    position: relative;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+/* Simple Responsive Framework. */
+.row {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.item {
+    padding-top: 35px;
     margin: 10px;
-    padding: 20px;
-    flex-grow: 1;
+    border: 2px solid black;
+    position: relative;
+    background-color: #999999;
 }
 
-.title {
+
+/********** Medium devices only **********/
+@media (min-width: 992px){
+    .col-md-4 {
+        float: left;
+        width: 33.33%;
+    }
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-sm-6, .col-sm-12 {
+        float: left;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+    .col-xs-12 {
+        float: left;
+        width: 100%;
+    }
+
+    .item {
+        margin: 10px 20px;
+    }
+}
+
+.corner {
+    font-weight: bold;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #333;
-    color: white;
-    display: flex;
-    width: 140px;
-    height: 30px;
-    text-align: center;
-    align-items: center;    
-    
+    padding: 5px 40px;
+    box-sizing: inherit;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 2px 2px;
+    font-size: 125%;
 }
 
-  
-  @media only screen and (min-width: 992px) {
-      body {
-          display: flex;
-          flex-wrap: wrap;
-          float: left;
-          border: 1px solid green;
-      }
-      .section {
-          flex: 0 0 calc(33.33% - 20px);
-          flex-grow: 1;
-      }
-  }
-  
-  @media (min-width: 768px) and (max-width: 991px) {
-      body {
-          display: flex;
-          flex-wrap: wrap;
-          float: left;
-          border: 1px solid green;
-      }
-      .section {
-          flex: 0 0 calc(50% - 20px);
-          flex-grow: 1;
-      }
-  }
+.corner.chicken {
+    background-color: #cc999a;
+}
 
-  @media (max-width: 767px) {
-      body {
-          display: flex;
-          flex-wrap: wrap;
-          float: left;
-          border: 1px solid green;
-      }
-      .section {
-          flex: 0 0 calc(100% - 20px);
-      }
-  }
+.corner.beef {
+    background-color: #b34d48;
+    color: white;
+}
+
+.corner.sushi {
+    background-color: #e1d29f;
+}
